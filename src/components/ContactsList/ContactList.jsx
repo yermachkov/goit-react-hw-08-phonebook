@@ -20,7 +20,7 @@ export const ContactList = () => {
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            width={350}
+            width={450}
           >
             <ContactItem contact={contact} />
           </Box>

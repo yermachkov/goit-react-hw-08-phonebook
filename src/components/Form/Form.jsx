@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import { Box } from 'components/Box/Box';
 import { Input, Button } from './Form.styled';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 
 const schema = yup.object().shape({
   name: yup
