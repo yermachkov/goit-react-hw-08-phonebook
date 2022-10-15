@@ -8,9 +8,9 @@ export const ContactList = () => {
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
 
-  const visibleContacts = contacts.filter(contact =>
-    contact.name.toLowerCase().includes(filter)
-  );
+  const visibleContacts = filter
+    ? contacts.filter(contact => contact.name.toLowerCase().includes(filter))
+    : contacts;
 
   return (
     <List>
