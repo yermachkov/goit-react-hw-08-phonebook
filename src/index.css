@@ -18,3 +18,32 @@ input {
   display: block;
   margin-bottom: 15px;
 }
+
+button {
+  background-color: #0a66c2;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  max-width: 480px;
+  min-height: 40px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+button:hover {
+  background-color: #16437e;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
+}

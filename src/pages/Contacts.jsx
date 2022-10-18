@@ -1,13 +1,16 @@
-import { selectContacts, selectIsLoading, selectError } from 'redux/selectors';
-import { Box } from './Box/Box';
-import { ContactForm } from './Form/Form';
-import { Filter } from './Filter/Filter';
-import { ContactList } from './ContactsList/ContactList';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from 'redux/operations';
 import { useEffect } from 'react';
+// import { Link, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-export const App = () => {
+import { Box } from '../components/Box/Box';
+import { ContactForm } from 'components/Form/Form';
+import { Filter } from 'components/Filter/Filter';
+import { ContactList } from 'components/ContactsList/ContactList';
+
+import { fetchContacts } from 'redux/operations';
+import { selectContacts, selectIsLoading, selectError } from 'redux/selectors';
+
+const Contacts = () => {
   const dispatch = useDispatch();
 
   const contacts = useSelector(selectContacts);
@@ -28,7 +31,6 @@ export const App = () => {
       mr={'auto'}
       p={20}
     >
-      <h1>Phonebook</h1>
       <ContactForm />
       {isLoading && !error && <p>Request is in progress...</p>}
 
@@ -46,3 +48,5 @@ export const App = () => {
     </Box>
   );
 };
+
+export default Contacts;
