@@ -36,7 +36,13 @@ export default function Register() {
       <form onSubmit={handleSubmit} autoComplete="off">
         <label>
           Name
-          <input type="text" name="name" value={name} onChange={handleChange} />
+          <input
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            autoComplete="off"
+          />
         </label>
 
         <label>
@@ -46,6 +52,7 @@ export default function Register() {
             name="email"
             value={email}
             onChange={handleChange}
+            autoComplete="off"
           />
         </label>
 
@@ -56,6 +63,7 @@ export default function Register() {
             name="password"
             value={password}
             onChange={handleChange}
+            autoComplete="off"
           />
         </label>
 

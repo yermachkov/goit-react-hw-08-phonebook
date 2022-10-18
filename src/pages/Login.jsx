@@ -37,6 +37,7 @@ export default function Login() {
             name="email"
             value={email}
             onChange={handleChange}
+            autoComplete="off"
           />
         </label>
 
@@ -47,6 +48,7 @@ export default function Login() {
             name="password"
             value={password}
             onChange={handleChange}
+            autoComplete="off"
           />
         </label>
 
